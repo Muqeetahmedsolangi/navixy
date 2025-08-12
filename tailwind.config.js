@@ -126,10 +126,85 @@ module.exports = {
           800: "#1E293B",
           900: "#0F172A",
         },
+
+        // === TW CUSTOM COLORS (New Addition) ===
+        // TW Navy - #0F2D53 based
+        twNavy: {
+          50: "#F2F5FB",   // 20% - Lightest shade
+          100: "#E6EDF7",  // 30% - Very light
+          200: "#C7D9EE",  // 40% - Lighter shade
+          300: "#9CBEE0",  // 50% - Light
+          400: "#5A93CD",  // 60% - Medium shade
+          500: "#0F2D53",  // 100% - Base color (Primary button)
+          600: "#0C2548",  // 110% - Slightly darker
+          700: "#0A1E3D",  // 80% - Darker shade
+          800: "#081832",  // 120% - Very dark
+          900: "#051226",  // 140% - Darkest
+        },
+        
+        // TW Blue - #3BAFF3 based  
+        twBlue: {
+          50: "#F2FAFF",   // 20% - Lightest shade
+          100: "#E6F5FE",  // 30% - Very light
+          200: "#C7E8FD",  // 40% - Lighter shade
+          300: "#9DD6FB",  // 50% - Light
+          400: "#6CC5F7",  // 60% - Medium shade
+          500: "#3BAFF3",  // 100% - Base color
+          600: "#2B8FD3",  // 110% - Slightly darker
+          700: "#236FB3",  // 80% - Darker shade
+          800: "#1B5493",  // 120% - Very dark
+          900: "#133E73",  // 140% - Darkest
+        },
+
+        // TW Brand Colors (Direct mapping)
+        twBrand: {
+          navy: "#0F2D53",      // Primary button
+          darkNavy: "#12395E",  // Sub color variant
+          hoverBlue: "#3888E1", // Hover state
+          lightBlue: "#3BAFF3", // Secondary accent
+          green: "#7DCF0F",     // Success/accent
+          ghost: "#F4F4FF",     // Light background
+          white: "#FFFFFF",     // Pure white
+        },
+
+        // TW Green (Success) - #7DCF0F based
+        twGreen: {
+          50: "#F7FEF0",
+          100: "#ECFBD9",
+          200: "#D4F6B8",
+          300: "#B8EE8B",
+          400: "#9CE162",
+          500: "#7DCF0F",   // TW green
+          600: "#6AB60D",
+          700: "#56970B",
+          800: "#447809",
+          900: "#386308",
+        },
       },
 
       fontFamily: {
         inter: ["Inter", "sans-serif"],
+        
+        // === TW CUSTOM FONTS (New Addition) ===
+        // Lexend - Primary font for headings/display
+        lexend: [
+          "Lexend", 
+          "system-ui", 
+          "-apple-system", 
+          "BlinkMacSystemFont", 
+          "Segoe UI", 
+          "sans-serif"
+        ],
+        
+        // Proxima Nova - Secondary font for body text
+        proximaNova: [
+          "Proxima Nova", 
+          "system-ui", 
+          "-apple-system", 
+          "BlinkMacSystemFont", 
+          "Segoe UI", 
+          "sans-serif"
+        ],
       },
       boxShadow: {
         base: "0px 0px 1px rgba(40, 41, 61, 0.08), 0px 0.5px 2px rgba(96, 97, 112, 0.16)",

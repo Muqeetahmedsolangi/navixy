@@ -1,0 +1,182 @@
+// TW CUSTOM FONTS - Lexend & Proxima Nova
+// This file adds new fonts without affecting existing ones
+
+// Google Fonts - Lexend (Primary Font for headings/display)
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;400;600;800;900&display=swap');
+
+// Proxima Nova Setup
+// Note: You need to add your Proxima Nova source below
+// Option 1: Adobe Fonts (Typekit) - Uncomment and add your kit ID
+// @import url('https://use.typekit.net/YOUR-KIT-ID.css');
+
+// Option 2: Self-hosted fonts - Uncomment when you add font files to /public/fonts/
+/*
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/ProximaNova-Thin.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/ProximaNova-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/ProximaNova-Semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/ProximaNova-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/ProximaNova-Extrabold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/ProximaNova-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+*/
+
+// CSS Custom Properties for TW Colors & Dark Mode
+:root {
+  // TW Navy Colors
+  --tw-navy-50: #F2F5FB;
+  --tw-navy-500: #0F2D53;
+  --tw-navy-700: #0A1E3D;
+
+  // TW Blue Colors  
+  --tw-blue-50: #F2FAFF;
+  --tw-blue-500: #3BAFF3;
+  --tw-blue-700: #236FB3;
+
+  // TW Brand Colors (Light Mode)
+  --tw-brand-navy: #0F2D53;
+  --tw-brand-dark-navy: #12395E;
+  --tw-brand-hover-blue: #3888E1;
+  --tw-brand-light-blue: #3BAFF3;
+  --tw-brand-green: #7DCF0F;
+  --tw-brand-ghost: #F4F4FF;
+  --tw-brand-white: #FFFFFF;
+
+  // TW Theme Variables (Light Mode)
+  --tw-primary: #0F2D53;
+  --tw-primary-hover: #3888E1;
+  --tw-secondary: #3BAFF3;
+  --tw-success: #7DCF0F;
+  --tw-background: #FFFFFF;
+  --tw-background-alt: #F4F4FF;
+  --tw-surface: #F8FAFC;
+  --tw-text-primary: #0F2D53;
+  --tw-text-secondary: #475569;
+  --tw-text-muted: #64748B;
+  --tw-border: #E2E8F0;
+}
+
+// Dark mode overrides for TW theme
+[data-theme="dark"], .dark {
+  --tw-primary: #3BAFF3;
+  --tw-primary-hover: #6CC5F7;
+  --tw-secondary: #0F2D53;
+  --tw-success: #7DCF0F;
+  --tw-background: #0F172A;
+  --tw-background-alt: #1E293B;
+  --tw-surface: #334155;
+  --tw-text-primary: #F8FAFC;
+  --tw-text-secondary: #CBD5E1;
+  --tw-text-muted: #94A3B8;
+  --tw-border: #475569;
+}
+
+// Utility classes for TW branding with dark/light mode support
+.tw-text-primary { color: var(--tw-text-primary); }
+.tw-text-secondary { color: var(--tw-text-secondary); }
+.tw-text-muted { color: var(--tw-text-muted); }
+
+.tw-bg { background-color: var(--tw-background); }
+.tw-bg-alt { background-color: var(--tw-background-alt); }
+.tw-bg-surface { background-color: var(--tw-surface); }
+
+.tw-border { border-color: var(--tw-border); }
+
+// Legacy utility classes (still work)
+.tw-navy { color: var(--tw-brand-navy); }
+.tw-blue { color: var(--tw-brand-hover-blue); }
+.tw-green { color: var(--tw-brand-green); }
+
+.bg-tw-navy { background-color: var(--tw-brand-navy); }
+.bg-tw-blue { background-color: var(--tw-brand-hover-blue); }
+.bg-tw-green { background-color: var(--tw-brand-green); }
+.bg-tw-ghost { background-color: var(--tw-brand-ghost); }
+
+// TW button styles with automatic dark/light mode
+.btn-tw-primary {
+  background-color: var(--tw-primary);
+  color: var(--tw-brand-white);
+  transition: background-color 0.3s ease;
+  
+  &:hover {
+    background-color: var(--tw-primary-hover);
+  }
+}
+
+.btn-tw-secondary {
+  background-color: var(--tw-secondary);
+  color: var(--tw-brand-white);
+  
+  &:hover {
+    background-color: var(--tw-blue-700);
+  }
+}
+
+.btn-tw-success {
+  background-color: var(--tw-success);
+  color: var(--tw-brand-white);
+  
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+// TW card styles
+.card-tw {
+  background-color: var(--tw-background);
+  border: 1px solid var(--tw-border);
+  color: var(--tw-text-primary);
+}
+
+.card-tw-ghost {
+  background-color: var(--tw-background-alt);
+  border: 1px solid var(--tw-border);
+  color: var(--tw-text-primary);
+}
+
+// TW theme toggle indicator
+.tw-theme-active {
+  &::before {
+    content: "🎨";
+    margin-right: 0.5rem;
+  }
+}

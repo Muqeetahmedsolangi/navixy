@@ -7,20 +7,22 @@ import { motion } from "framer-motion";
 import useRtl from "@/hooks/useRtl";
 import useDarkMode from "@/hooks/useDarkMode";
 import useSkin from "@/hooks/useSkin";
+import useTwTheme from "@/hooks/useTwTheme";
 import Loading from "@/components/Loading";
 
 export default function WebsiteLayout({ children }) {
   const [isRtl] = useRtl();
   const [isDark] = useDarkMode();
   const [skin] = useSkin();
+  const { isTwThemeEnabled } = useTwTheme();
   const location = usePathname();
 
   return (
     <div
       dir={isRtl ? "rtl" : "ltr"}
-      className={`website-wrapper min-h-screen ${isDark ? "dark" : "light"} ${
+      className={`website-wrapper min-h-screen transition-colors duration-300 ${isDark ? "dark" : "light"} ${
         skin === "bordered" ? "skin--bordered" : "skin--default"
-      }`}
+      } ${isTwThemeEnabled ? "tw-theme-active" : ""}`}
     >
       <ToastContainer />
       
