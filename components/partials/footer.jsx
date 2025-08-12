@@ -159,7 +159,7 @@ const Footer = () => {
               </div>
               
               {/* Copyright */}
-              <p className={`text-sm ${isTwThemeEnabled ? 'font-proximaNova text-twBlue-300' : 'text-gray-400'} max-w-md`}>
+              <p className={`text-[11px] ${isTwThemeEnabled ? 'font-proximaNova text-twBlue-300' : 'text-gray-400'} max-w-md`}>
                 © 2005-2025 Navixy. GPS tracking and telematics platform. All rights reserved.
               </p>
             </div>
@@ -173,7 +173,7 @@ const Footer = () => {
                   <Link 
                     key={index}
                     href={link.href}
-                    className={`text-sm ${isTwThemeEnabled ? 'font-proximaNova text-twBlue-300 hover:text-twBlue-200' : 'text-gray-400 hover:text-gray-300'} transition-colors whitespace-nowrap`}
+                    className={`text-[12px] ${isTwThemeEnabled ? 'font-proximaNova text-twBlue-300 hover:text-twBlue-200' : 'text-gray-400 hover:text-gray-300'} transition-colors whitespace-nowrap`}
                   >
                     {link.name}
                   </Link>
@@ -181,7 +181,7 @@ const Footer = () => {
               </div>
 
               {/* Social Links */}
-              <div className="flex space-x-3">
+              <div className="flex space-x-2">
                 {socialLinks.map((social, index) => (
                   <Link
                     key={index}

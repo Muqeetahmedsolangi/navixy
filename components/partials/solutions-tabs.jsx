@@ -16,7 +16,7 @@ const SolutionsTabs = () => {
       icon: "heroicons:map-pin",
       content: {
         title: "Advanced GPS Location Tracking",
-        description: "Real-time GPS tracking with precise location data, geofencing capabilities, and comprehensive route optimization. Monitor your assets 24/7 with industry-leading accuracy and reliability.",
+        description: "Real-time GPS tracking with precise location data, geofencing capabilities, optimization. Monitor your assets 24/7 with industry-leading accuracy and reliability.",
         features: [
           "Real-time GPS positioning",
           "Geofencing and alerts",
@@ -31,8 +31,8 @@ const SolutionsTabs = () => {
       title: "Vehicle telemetry",
       icon: "heroicons:truck",
       content: {
-        title: "Leverage advanced telemetry with real-time visualization to optimize fleet performance and reduce risks",
-        description: "Improve eco-driving, enhance safety with video telematics and ADAS, streamline maintenance, and prevent fuel fraud.",
+        title: "optimize fleet performance and reduce risks",
+        description: "Improve eco-driving, enhance safety with video telematics and ADAS, streamline maintenance, and prevent fuel fraud and theft with our advanced telematics solutions.",
         features: [
           "Speeding penalty points",
           "Harsh driving",

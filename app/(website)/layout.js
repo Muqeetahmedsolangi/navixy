@@ -10,6 +10,7 @@ import useSkin from "@/hooks/useSkin";
 import useTwTheme from "@/hooks/useTwTheme";
 import Loading from "@/components/Loading";
 import Footer from "@/components/partials/footer";
+import MegaNavbar from "@/components/partials/mega-navbar";
 
 export default function WebsiteLayout({ children }) {
   const [isRtl] = useRtl();
@@ -23,9 +24,20 @@ export default function WebsiteLayout({ children }) {
       dir={isRtl ? "rtl" : "ltr"}
       className={`website-wrapper min-h-screen transition-colors duration-300 ${isDark ? "dark" : "light"} ${
         skin === "bordered" ? "skin--bordered" : "skin--default"
-      } ${isTwThemeEnabled ? "tw-theme-active" : ""}`}
+      } ${isTwThemeEnabled ? "tw-theme-active tw-bg" : "bg-white dark:bg-slate-900"}`}
+      data-theme={isDark ? "dark" : "light"}
+      style={{
+        // Apply dynamic CSS variables when TW theme is active
+        ...(isTwThemeEnabled && {
+          backgroundColor: isDark ? 'var(--tw-background)' : 'var(--tw-background)',
+          color: isDark ? 'var(--tw-text-primary)' : 'var(--tw-text-primary)',
+        })
+      }}
     >
       <ToastContainer />
+      
+      {/* Mega Navigation */}
+      <MegaNavbar />
       
       <main className="website-content">
         <motion.div

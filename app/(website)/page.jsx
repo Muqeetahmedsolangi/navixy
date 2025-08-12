@@ -61,69 +61,7 @@ const HomePage = () => {
   ];
 
   return (
-    <div className={`min-h-screen transition-colors duration-300 ${isTwThemeEnabled ? 'tw-bg dark:bg-background-dark' : 'bg-white dark:bg-slate-900'}`}>
-      {/* Header */}
-      <header className={`shadow-sm sticky top-0 z-50 transition-colors duration-300 ${isTwThemeEnabled ? 'tw-bg-alt dark:bg-background-darker tw-border-b' : 'bg-white dark:bg-slate-800'}`}>
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <Icon icon="heroicons:home-modern" className={`text-2xl ${isTwThemeEnabled ? 'tw-navy' : 'text-primary-500'}`} />
-              <span className={`text-xl font-lexend font-black ${isTwThemeEnabled ? 'tw-text-primary' : 'text-slate-900 dark:text-white'}`}>
-                TechSpace
-              </span>
-            </div>
-            
-            <nav className="hidden md:flex items-center space-x-8">
-              <Link href="#" className={`font-proximaNova transition-colors ${isTwThemeEnabled ? 'tw-text-secondary hover:tw-blue' : 'text-slate-600 dark:text-slate-300 hover:text-primary-500'}`}>
-                Explore
-              </Link>
-              <Link href="#" className={`font-proximaNova transition-colors ${isTwThemeEnabled ? 'tw-text-secondary hover:tw-blue' : 'text-slate-600 dark:text-slate-300 hover:text-primary-500'}`}>
-                Solutions
-              </Link>
-              <Link href="#" className={`font-proximaNova transition-colors ${isTwThemeEnabled ? 'tw-text-secondary hover:tw-blue' : 'text-slate-600 dark:text-slate-300 hover:text-primary-500'}`}>
-                About
-              </Link>
-              <Link href="#" className={`font-proximaNova transition-colors ${isTwThemeEnabled ? 'tw-text-secondary hover:tw-blue' : 'text-slate-600 dark:text-slate-300 hover:text-primary-500'}`}>
-                Contact
-              </Link>
-            </nav>
-
-            <div className="flex items-center space-x-4">
-              {/* Dark Mode Toggle */}
-              <button
-                onClick={() => setDarkMode(!isDark)}
-                className={`p-2 rounded-lg transition-colors ${isTwThemeEnabled ? 'tw-bg-alt hover:tw-bg-surface' : 'bg-gray-100 hover:bg-gray-200 dark:bg-slate-700 dark:hover:bg-slate-600'}`}
-                aria-label="Toggle dark mode"
-              >
-                <Icon 
-                  icon={isDark ? "heroicons:sun" : "heroicons:moon"} 
-                  className={`text-lg ${isTwThemeEnabled ? 'tw-text-secondary' : 'text-gray-600 dark:text-gray-300'}`} 
-                />
-              </button>
-              
-              {/* Theme Toggle */}
-              <button
-                onClick={() => toggleTwTheme()}
-                className={`p-2 rounded-lg transition-colors ${isTwThemeEnabled ? 'tw-theme-active btn-tw-primary' : 'bg-gray-100 hover:bg-gray-200'}`}
-                aria-label="Toggle TW theme"
-              >
-                <Icon icon="heroicons:paint-brush" className="text-lg" />
-              </button>
-              
-              <Link 
-                href="/dashboard" 
-                className={`font-proximaNova transition-colors ${isTwThemeEnabled ? 'tw-text-secondary hover:tw-blue' : 'text-slate-600 dark:text-slate-300 hover:text-primary-500'}`}
-              >
-                Dashboard
-              </Link>
-              <Button 
-                text="Get Started" 
-                className={isTwThemeEnabled ? twButton.primary : "bg-primary-500 hover:bg-primary-600 text-white px-6 py-2 rounded-lg transition-colors"}
-              />
-            </div>
-          </div>
-        </div>
-      </header>
+    <div className="website-main-content">
 
       {/* Hero Section */}
       <HeroSection />
