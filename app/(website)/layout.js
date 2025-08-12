@@ -9,6 +9,7 @@ import useDarkMode from "@/hooks/useDarkMode";
 import useSkin from "@/hooks/useSkin";
 import useTwTheme from "@/hooks/useTwTheme";
 import Loading from "@/components/Loading";
+import Footer from "@/components/partials/footer";
 
 export default function WebsiteLayout({ children }) {
   const [isRtl] = useRtl();
@@ -57,6 +58,9 @@ export default function WebsiteLayout({ children }) {
           </Suspense>
         </motion.div>
       </main>
+      
+      {/* Footer */}
+      <Footer />
     </div>
   );
 } 

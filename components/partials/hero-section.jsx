@@ -47,39 +47,24 @@ const HeroSection = () => {
       {/* Minimal overlay for text contrast */}
       <div className="absolute inset-0 bg-black/10 z-5"></div>
 
-      {/* Gradient Wave at Bottom */}
-      <div className="absolute bottom-0 left-0 right-0 z-10 opacity-40">
-        {/* Wave Shape */}
-        <svg 
-          viewBox="0 0 1200 200" 
-          preserveAspectRatio="none" 
-          className="w-full h-40 fill-current"
-          style={{ 
-            fill: isTwThemeEnabled 
-              ? 'url(#twGradient)' 
-              : 'url(#defaultGradient)'
-          }}
-        >
-          <defs>
-            {/* TW Theme Gradient - More Bluish */}
-            <linearGradient id="twGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#3BAFF3" />
-              <stop offset="25%" stopColor="#5BC0F5" />
-              <stop offset="50%" stopColor="#6CC5F7" />
-              <stop offset="75%" stopColor="#3BAFF3" />
-              <stop offset="100%" stopColor="#0F2D53" />
-            </linearGradient>
-            
-            {/* Default Gradient - More Bluish */}
-            <linearGradient id="defaultGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#3b82f6" />
-              <stop offset="50%" stopColor="#60a5fa" />
-              <stop offset="100%" stopColor="#1e40af" />
-            </linearGradient>
-          </defs>
-          
-          <path d="M0,160L48,144C96,128,192,96,288,80C384,64,480,64,576,80C672,96,768,128,864,144C960,160,1056,160,1152,160C1200,160,1200,160,1200,200L0,200Z"></path>
-        </svg>
+      {/* Tech/GPS Bottom Accent */}
+      <div className="absolute bottom-0 left-0 right-0 z-20">
+        {/* Subtle gradient bar for maps/tech feel */}
+        <div className={`w-full h-16 ${isTwThemeEnabled ? 'bg-gradient-to-r from-twNavy-800 via-twBlue-500 to-twNavy-800' : 'bg-gradient-to-r from-slate-800 via-blue-500 to-slate-800'} opacity-60`}>
+          {/* Optional tech dots pattern */}
+          <div className="w-full h-full flex items-center justify-center space-x-2 opacity-30">
+            {[...Array(50)].map((_, i) => (
+              <div 
+                key={i} 
+                className={`w-1 h-1 rounded-full ${isTwThemeEnabled ? 'bg-twBlue-300' : 'bg-blue-300'}`}
+                style={{ 
+                  animationDelay: `${i * 0.1}s`,
+                  animation: 'pulse 3s ease-in-out infinite'
+                }}
+              ></div>
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* Hero Image SVG - Dashboard Mockups at Bottom */}
