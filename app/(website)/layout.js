@@ -11,6 +11,8 @@ import useTwTheme from "@/hooks/useTwTheme";
 import Loading from "@/components/Loading";
 import Footer from "@/components/partials/footer";
 import MegaNavbar from "@/components/partials/mega-navbar";
+import AIAssistantWidget from "@/components/partials/ai-assistant-widget";
+import ScrollToTop from "@/components/partials/scroll-to-top";
 
 export default function WebsiteLayout({ children }) {
   const [isRtl] = useRtl();
@@ -73,6 +75,10 @@ export default function WebsiteLayout({ children }) {
       
       {/* Footer */}
       <Footer />
+
+      {/* Fixed UI Components */}
+      <ScrollToTop />
+      <AIAssistantWidget />
     </div>
   );
 } 

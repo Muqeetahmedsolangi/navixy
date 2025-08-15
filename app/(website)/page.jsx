@@ -7,13 +7,17 @@ import Card from "@/components/ui/Card";
 import Icon from "@/components/ui/Icon";
 import HeroSection from "@/components/partials/hero-section";
 import SolutionsTabs from "@/components/partials/solutions-tabs";
+import BrandsMarquee from "@/components/partials/brands-marquee";
+import DualMarquee from "@/components/partials/dual-marquee";
+import TestimonialsSection from "@/components/partials/testimonials-section";
+import VideoSection from "@/components/partials/video-section";
 import useTwTheme from "@/hooks/useTwTheme";
 import useDarkMode from "@/hooks/useDarkMode";
 
 const HomePage = () => {
   const { twButton, twCard, isTwThemeEnabled, toggleTwTheme } = useTwTheme();
   const [isDark, setDarkMode] = useDarkMode();
-  
+
   const features = [
     {
       icon: "heroicons:code-bracket-square",
@@ -44,13 +48,13 @@ const HomePage = () => {
       description: "Modern frontend development"
     },
     {
-      image: "/assets/images/all-img/card-2.png", 
+      image: "/assets/images/all-img/card-2.png",
       title: "Node.js & Python",
       description: "Powerful backend solutions"
     },
     {
       image: "/assets/images/all-img/card-3.png",
-      title: "Cloud & DevOps", 
+      title: "Cloud & DevOps",
       description: "Scalable infrastructure"
     },
     {
@@ -66,6 +70,9 @@ const HomePage = () => {
       {/* Hero Section */}
       <HeroSection />
 
+      {/* Brands Marquee */}
+      <BrandsMarquee />
+
       {/* Navixy-Style Platform Section */}
       <section className={`py-20 ${isTwThemeEnabled ? 'tw-bg' : 'bg-white dark:bg-slate-900'}`}>
         <div className="container mx-auto px-6">
@@ -75,11 +82,11 @@ const HomePage = () => {
               Telematics platform to innovate and scale globally
             </h2>
             <p className={`text-lg md:text-xl max-w-5xl mx-auto leading-relaxed mb-8 ${isTwThemeEnabled ? 'font-proximaNova tw-text-secondary' : 'text-slate-600 dark:text-slate-300'}`}>
-              Navixy makes building, deploying, and scaling GPS and telematics applications easy and flexible. With 20+ years 
+              Navixy makes building, deploying, and scaling GPS and telematics applications easy and flexible. With 20+ years
               of expertise, we ensure reliable performance and ongoing innovation.
             </p>
-            <Button 
-              text="Get started" 
+            <Button
+              text="Get started"
               className={`px-8 py-4 text-lg font-semibold rounded-lg ${isTwThemeEnabled ? 'bg-twBlue-500 hover:bg-twBlue-600 text-white font-proximaNova' : 'bg-blue-500 hover:bg-blue-600 text-white'}`}
             />
           </div>
@@ -122,7 +129,7 @@ const HomePage = () => {
 
           {/* Features Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
+
             {/* High-performance tracking */}
             <div className={`p-8 rounded-xl border ${isTwThemeEnabled ? 'tw-bg border-twNavy-200' : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700'}`}>
               <div className="text-center mb-6">
@@ -220,6 +227,15 @@ const HomePage = () => {
       {/* Solutions Tabs Section */}
       <SolutionsTabs />
 
+      {/* Video Section - Explore Navixy */}
+      <VideoSection />
+      {/* Dual Marquee - Marketplace & Integrations */}
+      <DualMarquee />
+
+
+      {/* Testimonials Section */}
+      <TestimonialsSection />
+
       {/* News and Trends Section - Navixy Style */}
       <section className={`py-20 relative ${isTwThemeEnabled ? 'bg-twBrand-ghost' : 'bg-gray-50 dark:bg-slate-800'}`}>
         {/* Background Grid Lines */}
@@ -227,8 +243,8 @@ const HomePage = () => {
           {/* Vertical Lines */}
           <div className="absolute inset-0">
             {[...Array(20)].map((_, i) => (
-              <div 
-                key={`v-${i}`} 
+              <div
+                key={`v-${i}`}
                 className={`absolute h-full border-l ${isTwThemeEnabled ? 'border-twBlue-300/30' : 'border-gray-300'}`}
                 style={{ left: `${(i / 20) * 100}%` }}
               ></div>
@@ -237,8 +253,8 @@ const HomePage = () => {
           {/* Horizontal Lines */}
           <div className="absolute inset-0">
             {[...Array(12)].map((_, i) => (
-              <div 
-                key={`h-${i}`} 
+              <div
+                key={`h-${i}`}
                 className={`absolute w-full border-t ${isTwThemeEnabled ? 'border-twBlue-300/30' : 'border-gray-300'}`}
                 style={{ top: `${(i / 12) * 100}%` }}
               ></div>
@@ -253,18 +269,18 @@ const HomePage = () => {
               Stay ahead with the latest news and trends
             </h2>
             <p className={`text-lg md:text-xl max-w-4xl mx-auto leading-relaxed mb-8 ${isTwThemeEnabled ? 'font-proximaNova tw-text-secondary' : 'text-slate-600 dark:text-slate-300'}`}>
-              Keep up with the latest Navixy updates and telematics news. Gain insights into emerging technologies, industry 
+              Keep up with the latest Navixy updates and telematics news. Gain insights into emerging technologies, industry
               innovations, and best practices.
             </p>
-            <Button 
-              text="Explore blog" 
+            <Button
+              text="Explore blog"
               className={`px-8 py-4 text-lg font-semibold rounded-lg ${isTwThemeEnabled ? 'bg-twBlue-500 hover:bg-twBlue-600 text-white font-proximaNova' : 'bg-blue-500 hover:bg-blue-600 text-white'}`}
             />
           </div>
 
           {/* Blog Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
+
             {/* Card 1 - User Applications */}
             <div className={`rounded-xl overflow-hidden shadow-lg ${isTwThemeEnabled ? 'bg-white border border-twNavy-100' : 'bg-white dark:bg-slate-700 border border-gray-200 dark:border-slate-600'}`}>
               <div className={`h-48 relative ${isTwThemeEnabled ? 'bg-gradient-to-br from-twBlue-400 to-twNavy-600' : 'bg-gradient-to-br from-blue-400 to-blue-600'}`}>

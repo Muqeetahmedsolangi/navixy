@@ -13,7 +13,7 @@ const HeroSection = () => {
   return (
     <section 
       className={`relative ${isTwThemeEnabled ? 'bg-gradient-to-br from-twNavy-900 via-twNavy-800 to-twBlue-900' : 'bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900'}`} 
-      style={{ height: '100vh' }}
+      style={{ height: '130vh' }}
     >
       {/* Very Subtle Grid Background */}
       <div className="absolute inset-0 z-0">
@@ -69,7 +69,7 @@ const HeroSection = () => {
 
       {/* Hero Image SVG - Dashboard Mockups at Bottom */}
       <div className="absolute bottom-[-60px] left-0 right-0 z-15">
-        <div className="w-full" style={{ height: '100vh' }}>
+        <div className="w-full" style={{ height: '150vh' }}>
           <img 
             src="/assets/new-images/hero-image.svg" 
             alt="Telematics Dashboard"
@@ -79,8 +79,8 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Content - Positioned at Top with Smaller Text */}
-      <div className="relative z-20 pt-12 pb-16">
+      {/* Content - Centered in Screen */}
+      <div className="relative z-20 flex items-center justify-center min-h-[80vh]">
         <div className="container mx-auto px-6">
           <div className="text-center space-y-6 max-w-4xl mx-auto">
             
@@ -104,6 +104,7 @@ const HeroSection = () => {
             <div className="pt-6">
               <Button 
                 text="Get started" 
+                link="/get-started"
                 className={`px-8 py-3 text-base font-semibold rounded-lg transition-all shadow-xl ${isTwThemeEnabled ? 'bg-twBlue-500 hover:bg-twBlue-400 text-white font-proximaNova' : 'bg-blue-500 hover:bg-blue-400 text-white'}`}
               />
             </div>
