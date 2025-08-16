@@ -161,17 +161,12 @@ const MegaNavbar = () => {
         <div className="flex items-center justify-between h-16">
           
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3">
-            <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${
-              isTwThemeEnabled ? 'bg-twBlue-500' : 'bg-blue-500'
-            }`}>
-              <Icon icon="heroicons:map" className="w-5 h-5 text-white" />
-            </div>
-            <span className={`text-xl font-bold ${
-              isTwThemeEnabled ? 'font-lexend text-twNavy-700' : 'text-gray-900'
-            } dark:text-white`}>
-              Navixy
-            </span>
+          <Link href="/" className="flex items-center">
+            <img 
+              src="/assets/new-images/LOGO.png" 
+              alt="Company Logo" 
+              className="h-12 w-auto object-contain"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -250,14 +245,14 @@ const MegaNavbar = () => {
             </Link>
             
             <Link 
-              href="/about" 
+              href="/contact" 
               className={`px-3 py-2 rounded-lg font-medium transition-colors ${
                 isTwThemeEnabled 
                   ? 'text-twNavy-600 hover:text-twNavy-700 hover:bg-twBlue-50 font-proximaNova' 
                   : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
               } dark:text-gray-300 dark:hover:text-white dark:hover:bg-slate-700`}
             >
-              About
+              Contact
             </Link>
           </div>
 
@@ -291,7 +286,7 @@ const MegaNavbar = () => {
 
             {/* Login */}
             <Link 
-              href="/login"
+              href="/auth/login"
               className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                 isTwThemeEnabled 
                   ? 'text-twNavy-600 hover:text-twNavy-700 hover:bg-twBlue-50 font-proximaNova' 
@@ -329,9 +324,9 @@ const MegaNavbar = () => {
               <Link href="/solutions" className="block px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-700">Solutions</Link>
               <Link href="/resources" className="block px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-700">Resources</Link>
               <Link href="/pricing" className="block px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-700">Pricing</Link>
-              <Link href="/about" className="block px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-700">About</Link>
+              <Link href="/contact" className="block px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-700">Contact</Link>
               <hr className="my-4 border-gray-200 dark:border-slate-700" />
-              <Link href="/login" className="block px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-700">Login</Link>
+              <Link href="/auth/login" className="block px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-700">Login</Link>
               <Button text="Get started" className="w-full mt-2 bg-blue-500 hover:bg-blue-600 text-white" />
             </div>
           </div>

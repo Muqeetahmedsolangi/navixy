@@ -17,10 +17,10 @@ const VideoSection = () => {
           <div className="space-y-8">
             <div>
               <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 ${isTwThemeEnabled ? 'font-lexend' : ''}`}>
-                Explore Navixy
+                Explore GeoTrack
               </h2>
               <p className={`text-lg leading-relaxed text-white/90 mb-8 ${isTwThemeEnabled ? 'font-proximaNova' : ''}`}>
-                Learn more about Navixy on our YouTube channel. From step-by-step guides and feature highlights to industry insights, our videos help you discover the full potential of the Navixy telematics platform.
+                Learn more about GeoTrack on our YouTube channel. From step-by-step guides and feature highlights to industry insights, our videos help you discover the full potential of the GeoTrack telematics platform.
               </p>
             </div>
 
@@ -53,7 +53,7 @@ const VideoSection = () => {
                         <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                       </div>
                       <div className="flex-1 text-center">
-                        <span className="text-xs text-white font-medium">Navixy Dashboard</span>
+                        <span className="text-xs text-white font-medium">GeoTrack Dashboard</span>
                       </div>
                     </div>
                     
@@ -93,12 +93,12 @@ const VideoSection = () => {
                   </div>
                 </div>
 
-                {/* Navixy Branding Overlay */}
+                {/* GeoTrack Branding Overlay */}
                 <div className="absolute top-6 left-6 z-10">
                   <div className="flex items-center space-x-2">
                     <Icon icon="heroicons:map" className={`w-6 h-6 text-white`} />
                     <span className={`text-white font-bold text-lg ${isTwThemeEnabled ? 'font-lexend' : ''}`}>
-                      Navixy
+                      GeoTrack
                     </span>
                   </div>
                 </div>
@@ -107,7 +107,7 @@ const VideoSection = () => {
                 <div className="absolute bottom-6 left-6 right-6 z-10">
                   <div className="bg-black/60 backdrop-blur-sm rounded-lg p-4">
                     <h3 className={`text-white font-bold text-lg mb-1 ${isTwThemeEnabled ? 'font-lexend' : ''}`}>
-                      Navixy:
+                      GeoTrack:
                     </h3>
                     <h4 className={`text-white/90 text-base ${isTwThemeEnabled ? 'font-proximaNova' : ''}`}>
                       Advanced Telematics Software

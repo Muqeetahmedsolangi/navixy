@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import Icon from "@/components/ui/Icon";
 import useTwTheme from "@/hooks/useTwTheme";
 
@@ -58,8 +59,9 @@ const DualMarquee = () => {
             {/* Scrolling Services - Left to Right */}
             <div className={`flex items-center space-x-8 ${isPaused ? 'pause-animation-ltr' : 'animate-marquee-ltr'}`}>
               {topRowDuplicated.map((service, index) => (
-                <div 
+                <Link
                   key={`top-${service.name}-${index}`}
+                  href={`/marketplace/${service.name.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g, '')}`}
                   className={`flex items-center space-x-4 flex-shrink-0 px-6 py-4 rounded-xl transition-all duration-300 cursor-pointer group ${isTwThemeEnabled ? 'bg-white hover:bg-white/90 shadow-md hover:shadow-lg dark:bg-twNavy-700 dark:hover:bg-twNavy-600' : 'bg-gray-50 hover:bg-white shadow-md hover:shadow-lg dark:bg-slate-800 dark:hover:bg-slate-700'} border border-gray-200 dark:border-slate-600`}
                 >
                   {/* Service Icon */}
@@ -77,7 +79,7 @@ const DualMarquee = () => {
                   <span className={`text-sm font-medium whitespace-nowrap transition-opacity ${isTwThemeEnabled ? 'tw-text-primary font-proximaNova dark:text-twBlue-100' : 'text-gray-800 dark:text-gray-200'} group-hover:opacity-100 opacity-90`}>
                     {service.name}
                   </span>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
@@ -91,8 +93,9 @@ const DualMarquee = () => {
             {/* Scrolling Services - Right to Left */}
             <div className={`flex items-center space-x-8 ${isPaused ? 'pause-animation-rtl' : 'animate-marquee-rtl'}`}>
               {bottomRowDuplicated.map((service, index) => (
-                <div 
+                <Link
                   key={`bottom-${service.name}-${index}`}
+                  href={`/marketplace/${service.name.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g, '')}`}
                   className={`flex items-center space-x-4 flex-shrink-0 px-6 py-4 rounded-xl transition-all duration-300 cursor-pointer group ${isTwThemeEnabled ? 'bg-white hover:bg-white/90 shadow-md hover:shadow-lg dark:bg-twNavy-700 dark:hover:bg-twNavy-600' : 'bg-gray-50 hover:bg-white shadow-md hover:shadow-lg dark:bg-slate-800 dark:hover:bg-slate-700'} border border-gray-200 dark:border-slate-600`}
                 >
                   {/* Service Icon */}
@@ -110,7 +113,7 @@ const DualMarquee = () => {
                   <span className={`text-sm font-medium whitespace-nowrap transition-opacity ${isTwThemeEnabled ? 'tw-text-primary font-proximaNova dark:text-twBlue-100' : 'text-gray-800 dark:text-gray-200'} group-hover:opacity-100 opacity-90`}>
                     {service.name}
                   </span>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
@@ -118,9 +121,11 @@ const DualMarquee = () => {
 
         {/* Visit Marketplace Button */}
         <div className="text-center mt-8 px-6">
-          <button className={`px-8 py-3 rounded-lg font-semibold transition-all ${isTwThemeEnabled ? 'bg-twBlue-500 hover:bg-twBlue-600 text-white font-proximaNova' : 'bg-blue-500 hover:bg-blue-600 text-white'} shadow-md hover:shadow-lg`}>
-            Visit Marketplace
-          </button>
+          <Link href="/marketplace">
+            <button className={`px-8 py-3 rounded-lg font-semibold transition-all ${isTwThemeEnabled ? 'bg-twBlue-500 hover:bg-twBlue-600 text-white font-proximaNova' : 'bg-blue-500 hover:bg-blue-600 text-white'} shadow-md hover:shadow-lg`}>
+              Visit Marketplace
+            </button>
+          </Link>
         </div>
       </div>
 

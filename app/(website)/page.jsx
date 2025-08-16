@@ -8,6 +8,7 @@ import Icon from "@/components/ui/Icon";
 import HeroSection from "@/components/partials/hero-section";
 import SolutionsTabs from "@/components/partials/solutions-tabs";
 import BrandsMarquee from "@/components/partials/brands-marquee";
+import PlatformSection from "@/components/partials/platform-section";
 import DualMarquee from "@/components/partials/dual-marquee";
 import TestimonialsSection from "@/components/partials/testimonials-section";
 import VideoSection from "@/components/partials/video-section";
@@ -73,161 +74,13 @@ const HomePage = () => {
       {/* Brands Marquee */}
       <BrandsMarquee />
 
-      {/* Navixy-Style Platform Section */}
-      <section className={`py-20 ${isTwThemeEnabled ? 'tw-bg' : 'bg-white dark:bg-slate-900'}`}>
-        <div className="container mx-auto px-6">
-          {/* Header Content */}
-          <div className="text-center mb-16">
-            <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-6 ${isTwThemeEnabled ? 'font-lexend tw-text-primary' : 'text-slate-900 dark:text-white'}`}>
-              Telematics platform to innovate and scale globally
-            </h2>
-            <p className={`text-lg md:text-xl max-w-5xl mx-auto leading-relaxed mb-8 ${isTwThemeEnabled ? 'font-proximaNova tw-text-secondary' : 'text-slate-600 dark:text-slate-300'}`}>
-              Navixy makes building, deploying, and scaling GPS and telematics applications easy and flexible. With 20+ years
-              of expertise, we ensure reliable performance and ongoing innovation.
-            </p>
-            <Button
-              text="Get started"
-              className={`px-8 py-4 text-lg font-semibold rounded-lg ${isTwThemeEnabled ? 'bg-twBlue-500 hover:bg-twBlue-600 text-white font-proximaNova' : 'bg-blue-500 hover:bg-blue-600 text-white'}`}
-            />
-          </div>
-
-          {/* Stats Section */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
-            <div className="text-center">
-              <div className={`text-3xl md:text-4xl font-bold mb-2 ${isTwThemeEnabled ? 'font-lexend tw-text-primary' : 'text-slate-900 dark:text-white'}`}>
-                800K+
-              </div>
-              <div className={`text-sm ${isTwThemeEnabled ? 'font-proximaNova tw-text-secondary' : 'text-slate-600 dark:text-slate-400'}`}>
-                online assets
-              </div>
-            </div>
-            <div className="text-center">
-              <div className={`text-3xl md:text-4xl font-bold mb-2 ${isTwThemeEnabled ? 'font-lexend tw-text-primary' : 'text-slate-900 dark:text-white'}`}>
-                10K+
-              </div>
-              <div className={`text-sm ${isTwThemeEnabled ? 'font-proximaNova tw-text-secondary' : 'text-slate-600 dark:text-slate-400'}`}>
-                completed projects
-              </div>
-            </div>
-            <div className="text-center">
-              <div className={`text-3xl md:text-4xl font-bold mb-2 ${isTwThemeEnabled ? 'font-lexend tw-text-primary' : 'text-slate-900 dark:text-white'}`}>
-                130+
-              </div>
-              <div className={`text-sm ${isTwThemeEnabled ? 'font-proximaNova tw-text-secondary' : 'text-slate-600 dark:text-slate-400'}`}>
-                customer countries
-              </div>
-            </div>
-            <div className="text-center">
-              <div className={`text-3xl md:text-4xl font-bold mb-2 ${isTwThemeEnabled ? 'font-lexend tw-text-primary' : 'text-slate-900 dark:text-white'}`}>
-                99.9%
-              </div>
-              <div className={`text-sm ${isTwThemeEnabled ? 'font-proximaNova tw-text-secondary' : 'text-slate-600 dark:text-slate-400'}`}>
-                historical uptime
-              </div>
-            </div>
-          </div>
-
-          {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-            {/* High-performance tracking */}
-            <div className={`p-8 rounded-xl border ${isTwThemeEnabled ? 'tw-bg border-twNavy-200' : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700'}`}>
-              <div className="text-center mb-6">
-                <div className={`w-16 h-16 mx-auto rounded-lg flex items-center justify-center ${isTwThemeEnabled ? 'bg-twBlue-100' : 'bg-blue-100'}`}>
-                  <Icon icon="heroicons:chart-bar" className={`w-8 h-8 ${isTwThemeEnabled ? 'text-twBlue-600' : 'text-blue-600'}`} />
-                </div>
-              </div>
-              <h3 className={`text-xl font-bold mb-4 text-center ${isTwThemeEnabled ? 'font-lexend tw-text-primary' : 'text-slate-900 dark:text-white'}`}>
-                High-performance tracking
-              </h3>
-              <p className={`text-center leading-relaxed ${isTwThemeEnabled ? 'font-proximaNova tw-text-secondary' : 'text-slate-600 dark:text-slate-300'}`}>
-                Navixy combines modern technologies with an intuitive design, supporting real-time tracking of up to 25,000 assets in a single account.
-              </p>
-            </div>
-
-            {/* No-code customization */}
-            <div className={`p-8 rounded-xl border ${isTwThemeEnabled ? 'tw-bg border-twNavy-200' : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700'}`}>
-              <div className="text-center mb-6">
-                <div className={`w-16 h-16 mx-auto rounded-lg flex items-center justify-center ${isTwThemeEnabled ? 'bg-twBlue-100' : 'bg-blue-100'}`}>
-                  <Icon icon="heroicons:code-bracket" className={`w-8 h-8 ${isTwThemeEnabled ? 'text-twBlue-600' : 'text-blue-600'}`} />
-                </div>
-              </div>
-              <h3 className={`text-xl font-bold mb-4 text-center ${isTwThemeEnabled ? 'font-lexend tw-text-primary' : 'text-slate-900 dark:text-white'}`}>
-                No-code customization
-              </h3>
-              <p className={`text-center leading-relaxed ${isTwThemeEnabled ? 'font-proximaNova tw-text-secondary' : 'text-slate-600 dark:text-slate-300'}`}>
-                Navixy telematics PaaS enables businesses to personalize UI, integrate third-party apps, and customize telematics data processing.
-              </p>
-            </div>
-
-            {/* Engineering support */}
-            <div className={`p-8 rounded-xl border ${isTwThemeEnabled ? 'tw-bg border-twNavy-200' : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700'}`}>
-              <div className="text-center mb-6">
-                <div className={`w-16 h-16 mx-auto rounded-lg flex items-center justify-center ${isTwThemeEnabled ? 'bg-twBlue-100' : 'bg-blue-100'}`}>
-                  <Icon icon="heroicons:wrench-screwdriver" className={`w-8 h-8 ${isTwThemeEnabled ? 'text-twBlue-600' : 'text-blue-600'}`} />
-                </div>
-              </div>
-              <h3 className={`text-xl font-bold mb-4 text-center ${isTwThemeEnabled ? 'font-lexend tw-text-primary' : 'text-slate-900 dark:text-white'}`}>
-                Engineering support
-              </h3>
-              <p className={`text-center leading-relaxed ${isTwThemeEnabled ? 'font-proximaNova tw-text-secondary' : 'text-slate-600 dark:text-slate-300'}`}>
-                Navixy delivers top-tier technical and solution engineering support with a 99% customer satisfaction rate, enabling businesses to optimize operations.
-              </p>
-            </div>
-
-            {/* Platform flexibility */}
-            <div className={`p-8 rounded-xl border ${isTwThemeEnabled ? 'tw-bg border-twNavy-200' : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700'}`}>
-              <div className="text-center mb-6">
-                <div className={`w-16 h-16 mx-auto rounded-lg flex items-center justify-center ${isTwThemeEnabled ? 'bg-twBlue-100' : 'bg-blue-100'}`}>
-                  <Icon icon="heroicons:puzzle-piece" className={`w-8 h-8 ${isTwThemeEnabled ? 'text-twBlue-600' : 'text-blue-600'}`} />
-                </div>
-              </div>
-              <h3 className={`text-xl font-bold mb-4 text-center ${isTwThemeEnabled ? 'font-lexend tw-text-primary' : 'text-slate-900 dark:text-white'}`}>
-                Platform flexibility
-              </h3>
-              <p className={`text-center leading-relaxed ${isTwThemeEnabled ? 'font-proximaNova tw-text-secondary' : 'text-slate-600 dark:text-slate-300'}`}>
-                Flexible deployment options including cloud, on-premises, and hybrid solutions to meet diverse business requirements and compliance needs.
-              </p>
-            </div>
-
-            {/* Global reliability */}
-            <div className={`p-8 rounded-xl border ${isTwThemeEnabled ? 'tw-bg border-twNavy-200' : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700'}`}>
-              <div className="text-center mb-6">
-                <div className={`w-16 h-16 mx-auto rounded-lg flex items-center justify-center ${isTwThemeEnabled ? 'bg-twBlue-100' : 'bg-blue-100'}`}>
-                  <Icon icon="heroicons:globe-alt" className={`w-8 h-8 ${isTwThemeEnabled ? 'text-twBlue-600' : 'text-blue-600'}`} />
-                </div>
-              </div>
-              <h3 className={`text-xl font-bold mb-4 text-center ${isTwThemeEnabled ? 'font-lexend tw-text-primary' : 'text-slate-900 dark:text-white'}`}>
-                Global reliability
-              </h3>
-              <p className={`text-center leading-relaxed ${isTwThemeEnabled ? 'font-proximaNova tw-text-secondary' : 'text-slate-600 dark:text-slate-300'}`}>
-                Proven track record serving customers across 130+ countries with enterprise-grade infrastructure and 24/7 monitoring capabilities.
-              </p>
-            </div>
-
-            {/* API integration */}
-            <div className={`p-8 rounded-xl border ${isTwThemeEnabled ? 'tw-bg border-twNavy-200' : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700'}`}>
-              <div className="text-center mb-6">
-                <div className={`w-16 h-16 mx-auto rounded-lg flex items-center justify-center ${isTwThemeEnabled ? 'bg-twBlue-100' : 'bg-blue-100'}`}>
-                  <Icon icon="heroicons:cloud" className={`w-8 h-8 ${isTwThemeEnabled ? 'text-twBlue-600' : 'text-blue-600'}`} />
-                </div>
-              </div>
-              <h3 className={`text-xl font-bold mb-4 text-center ${isTwThemeEnabled ? 'font-lexend tw-text-primary' : 'text-slate-900 dark:text-white'}`}>
-                API integration
-              </h3>
-              <p className={`text-center leading-relaxed ${isTwThemeEnabled ? 'font-proximaNova tw-text-secondary' : 'text-slate-600 dark:text-slate-300'}`}>
-                Comprehensive REST API and webhook support for seamless integration with existing business systems and third-party applications.
-              </p>
-            </div>
-
-          </div>
-        </div>
-      </section>
+      {/* GeoTrack-Style Platform Section */}
+      <PlatformSection />
 
       {/* Solutions Tabs Section */}
       <SolutionsTabs />
 
-      {/* Video Section - Explore Navixy */}
+      {/* Video Section - Explore GeoTrack */}
       <VideoSection />
       {/* Dual Marquee - Marketplace & Integrations */}
       <DualMarquee />
@@ -236,7 +89,7 @@ const HomePage = () => {
       {/* Testimonials Section */}
       <TestimonialsSection />
 
-      {/* News and Trends Section - Navixy Style */}
+      {/* News and Trends Section - GeoTrack Style */}
       <section className={`py-20 relative ${isTwThemeEnabled ? 'bg-twBrand-ghost' : 'bg-gray-50 dark:bg-slate-800'}`}>
         {/* Background Grid Lines */}
         <div className="absolute inset-0 opacity-20">
@@ -269,13 +122,15 @@ const HomePage = () => {
               Stay ahead with the latest news and trends
             </h2>
             <p className={`text-lg md:text-xl max-w-4xl mx-auto leading-relaxed mb-8 ${isTwThemeEnabled ? 'font-proximaNova tw-text-secondary' : 'text-slate-600 dark:text-slate-300'}`}>
-              Keep up with the latest Navixy updates and telematics news. Gain insights into emerging technologies, industry
+              Keep up with the latest GeoTrack updates and telematics news. Gain insights into emerging technologies, industry
               innovations, and best practices.
             </p>
-            <Button
-              text="Explore blog"
-              className={`px-8 py-4 text-lg font-semibold rounded-lg ${isTwThemeEnabled ? 'bg-twBlue-500 hover:bg-twBlue-600 text-white font-proximaNova' : 'bg-blue-500 hover:bg-blue-600 text-white'}`}
-            />
+            <Link href="/blog">
+              <Button 
+                text="Explore blog"
+                className={`px-8 py-4 text-lg font-semibold rounded-lg ${isTwThemeEnabled ? 'bg-twBlue-500 hover:bg-twBlue-600 text-white font-proximaNova' : 'bg-blue-500 hover:bg-blue-600 text-white'}`}
+              />
+            </Link>
           </div>
 
           {/* Blog Cards */}
@@ -284,13 +139,13 @@ const HomePage = () => {
             {/* Card 1 - User Applications */}
             <div className={`rounded-xl overflow-hidden shadow-lg ${isTwThemeEnabled ? 'bg-white border border-twNavy-100' : 'bg-white dark:bg-slate-700 border border-gray-200 dark:border-slate-600'}`}>
               <div className={`h-48 relative ${isTwThemeEnabled ? 'bg-gradient-to-br from-twBlue-400 to-twNavy-600' : 'bg-gradient-to-br from-blue-400 to-blue-600'}`}>
-                {/* Navixy Logo */}
+                {/* GeoTrack Logo */}
                 <div className="absolute top-4 left-4">
                   <div className="flex items-center space-x-2">
                     <div className="w-6 h-6 bg-white rounded flex items-center justify-center">
                       <Icon icon="heroicons:map" className="w-4 h-4 text-blue-600" />
                     </div>
-                    <span className="text-white font-semibold text-sm">Navixy</span>
+                    <span className="text-white font-semibold text-sm">GeoTrack</span>
                   </div>
                 </div>
                 {/* Content */}
@@ -300,7 +155,7 @@ const HomePage = () => {
                     USER APPLICATIONS
                   </h3>
                   <p className="text-white/90 text-sm">
-                    Make Navixy work for you
+                    Make GeoTrack work for you
                   </p>
                 </div>
                 {/* Dashboard mockup */}
@@ -319,10 +174,10 @@ const HomePage = () => {
               </div>
               <div className="p-6">
                 <h4 className={`text-lg font-bold mb-3 ${isTwThemeEnabled ? 'font-lexend tw-text-primary' : 'text-slate-900 dark:text-white'}`}>
-                  Make Navixy work for you: Introducing User Applications
+                  Make GeoTrack work for you: Introducing User Applications
                 </h4>
                 <p className={`text-sm leading-relaxed mb-4 ${isTwThemeEnabled ? 'font-proximaNova tw-text-secondary' : 'text-slate-600 dark:text-slate-300'}`}>
-                  Navixy's new User Applications feature allows you to embed custom web apps directly within the platform. Whether it's fleet analytics, compliance tools, or industry-specific modules, this functionality empowers integrators to create tailored telematics solutions for their clients...
+                  GeoTrack's new User Applications feature allows you to embed custom web apps directly within the platform. Whether it's fleet analytics, compliance tools, or industry-specific modules, this functionality empowers integrators to create tailored telematics solutions for their clients...
                 </p>
                 <button className={`text-sm font-semibold ${isTwThemeEnabled ? 'text-twBlue-600 hover:text-twBlue-700' : 'text-blue-600 hover:text-blue-700'}`}>
                   Learn more
@@ -333,13 +188,13 @@ const HomePage = () => {
             {/* Card 2 - NGP */}
             <div className={`rounded-xl overflow-hidden shadow-lg ${isTwThemeEnabled ? 'bg-white border border-twNavy-100' : 'bg-white dark:bg-slate-700 border border-gray-200 dark:border-slate-600'}`}>
               <div className={`h-48 relative ${isTwThemeEnabled ? 'bg-gradient-to-br from-twBlue-500 to-twBlue-600' : 'bg-gradient-to-br from-blue-500 to-blue-600'}`}>
-                {/* Navixy Logo */}
+                {/* GeoTrack Logo */}
                 <div className="absolute top-4 left-4">
                   <div className="flex items-center space-x-2">
                     <div className="w-6 h-6 bg-white rounded flex items-center justify-center">
                       <Icon icon="heroicons:signal" className="w-4 h-4 text-blue-600" />
                     </div>
-                    <span className="text-white font-semibold text-sm">Navixy</span>
+                    <span className="text-white font-semibold text-sm">GeoTrack</span>
                   </div>
                 </div>
                 {/* Content */}
@@ -367,7 +222,7 @@ const HomePage = () => {
                   Introducing NGP: A new standard for telematics data exchange
                 </h4>
                 <p className={`text-sm leading-relaxed mb-4 ${isTwThemeEnabled ? 'font-proximaNova tw-text-secondary' : 'text-slate-600 dark:text-slate-300'}`}>
-                  We're introducing the Navixy Generic Protocol (NGP) — our answer to the fragmentation challenge in the telematics industry. We'll explore how the Navixy Generic Protocol transforms telematics, how it works, and the ways it can benefit your operations...
+                  We're introducing the GeoTrack Generic Protocol (NGP) — our answer to the fragmentation challenge in the telematics industry. We'll explore how the GeoTrack Generic Protocol transforms telematics, how it works, and the ways it can benefit your operations...
                 </p>
                 <button className={`text-sm font-semibold ${isTwThemeEnabled ? 'text-twBlue-600 hover:text-twBlue-700' : 'text-blue-600 hover:text-blue-700'}`}>
                   Learn more
@@ -378,13 +233,13 @@ const HomePage = () => {
             {/* Card 3 - Passenger Counter */}
             <div className={`rounded-xl overflow-hidden shadow-lg ${isTwThemeEnabled ? 'bg-white border border-twNavy-100' : 'bg-white dark:bg-slate-700 border border-gray-200 dark:border-slate-600'}`}>
               <div className={`h-48 relative ${isTwThemeEnabled ? 'bg-gradient-to-br from-twBlue-400 to-twNavy-500' : 'bg-gradient-to-br from-blue-400 to-indigo-600'}`}>
-                {/* Navixy Logo */}
+                {/* GeoTrack Logo */}
                 <div className="absolute top-4 left-4">
                   <div className="flex items-center space-x-2">
                     <div className="w-6 h-6 bg-white rounded flex items-center justify-center">
                       <Icon icon="heroicons:users" className="w-4 h-4 text-blue-600" />
                     </div>
-                    <span className="text-white font-semibold text-sm">Navixy</span>
+                    <span className="text-white font-semibold text-sm">GeoTrack</span>
                   </div>
                 </div>
                 {/* Content */}
@@ -407,7 +262,7 @@ const HomePage = () => {
                   Enhancing public transportation with automatic passenger counting
                 </h4>
                 <p className={`text-sm leading-relaxed mb-4 ${isTwThemeEnabled ? 'font-proximaNova tw-text-secondary' : 'text-slate-600 dark:text-slate-300'}`}>
-                  Navixy's automatic passenger counter solutions, powered by advanced sensors like the ASPC102, enable transit operators to optimize routes, improve vehicle occupancy rates, and reduce operational costs. Learn how real-time passenger data can enhance efficiency and customer satisfaction...
+                  GeoTrack's automatic passenger counter solutions, powered by advanced sensors like the ASPC102, enable transit operators to optimize routes, improve vehicle occupancy rates, and reduce operational costs. Learn how real-time passenger data can enhance efficiency and customer satisfaction...
                 </p>
                 <button className={`text-sm font-semibold ${isTwThemeEnabled ? 'text-twBlue-600 hover:text-twBlue-700' : 'text-blue-600 hover:text-blue-700'}`}>
                   Learn more

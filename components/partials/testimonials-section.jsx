@@ -12,7 +12,7 @@ const TestimonialsSection = () => {
       title: "CEO and Co-founder",
       company: "TRACK-N-ROUTE",
       avatar: "/assets/images/all-img/user.png", // Placeholder
-      quote: "Navixy gives us flexibility and robustness to provide a complete all-in-one solution to any business, regardless of their sphere and location.",
+      quote: "GeoTrack gives us flexibility and robustness to provide a complete all-in-one solution to any business, regardless of their sphere and location.",
       logo: "TRACK-N-ROUTE"
     },
     {
@@ -20,7 +20,7 @@ const TestimonialsSection = () => {
       title: "CEO",
       company: "trackerando",
       avatar: "/assets/images/all-img/user2.png", // Placeholder
-      quote: "We have been offering Navixy as a solution to our customers for over 5 years. The associated advantages such as user-friendliness, stability and fast service response are the guarantee of our success.",
+      quote: "We have been offering GeoTrack as a solution to our customers for over 5 years. The associated advantages such as user-friendliness, stability and fast service response are the guarantee of our success.",
       logo: "trackerando"
     },
     {
@@ -28,7 +28,7 @@ const TestimonialsSection = () => {
       title: "Chief Technical Officer",
       company: "ThaiSoft",
       avatar: "/assets/images/all-img/user3.png", // Placeholder
-      quote: "Our overall experience with Navixy has been great. The features and the support helped our company expand in many ways, and we look forward to working with them for years to come.",
+      quote: "Our overall experience with GeoTrack has been great. The features and the support helped our company expand in many ways, and we look forward to working with them for years to come.",
       logo: "ThaiSoft"
     }
   ];
@@ -71,7 +71,7 @@ const TestimonialsSection = () => {
         {/* Section Header - Smaller and Cleaner */}
         <div className="text-center mb-12">
           <h2 className={`text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-white ${isTwThemeEnabled ? 'font-lexend' : ''}`}>
-            Meet the companies who build with Navixy
+            Meet the companies who build with GeoTrack
           </h2>
           <p className={`text-base md:text-lg max-w-4xl mx-auto leading-relaxed text-white/90 ${isTwThemeEnabled ? 'font-proximaNova' : ''}`}>
             Together with our global network of integrators and developers, we have successfully delivered thousands of projects from startups to enterprises, solving industry-specific challenges.
@@ -118,12 +118,6 @@ const TestimonialsSection = () => {
           ))}
         </div>
 
-        {/* Bottom Call to Action - Simpler */}
-        <div className="text-center mt-12">
-          <button className={`px-6 py-3 rounded-lg font-semibold transition-all ${isTwThemeEnabled ? 'bg-twBlue-500/80 hover:bg-twBlue-500 text-white font-proximaNova border border-twBlue-400/50' : 'bg-blue-500/80 hover:bg-blue-500 text-white border border-blue-400/50'}`}>
-            Join Our Partner Network
-          </button>
-        </div>
       </div>
     </section>
   );

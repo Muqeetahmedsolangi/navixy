@@ -87,7 +87,7 @@ const SolutionsTabs = () => {
             Build innovative GPS and telematics solutions
           </h2>
           <p className={`text-lg md:text-xl max-w-5xl mx-auto leading-relaxed ${isTwThemeEnabled ? 'font-proximaNova tw-text-secondary' : 'text-slate-600 dark:text-slate-300'}`}>
-            Navixy simplifies the creation and scaling of high-performance GPS and telematics applications, equipping 
+            GeoTrack simplifies the creation and scaling of high-performance GPS and telematics applications, equipping 
             integrators and developers with powerful solutions and tools to tackle unique business challenges.
           </p>
         </div>

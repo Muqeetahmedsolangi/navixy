@@ -26,7 +26,7 @@ const PartnerTestimonialsSlider = () => {
       company: "11-50 employees",
       avatar: "/assets/images/avatar/av-1.svg",
       testimonial: "Amazing Platform",
-      review: "The Navixy team are professional, courteous and always willing to listen. Great company and great people. This is the most comprehensive platform I have to integrate new devices.",
+      review: "The GeoTrack team are professional, courteous and always willing to listen. Great company and great people. This is the most comprehensive platform I have to integrate new devices.",
       rating: 5,
       companyLogo: "Capterra"
     },

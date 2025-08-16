@@ -36,11 +36,11 @@ const Footer = () => {
   ];
 
   const companyLinks = [
-    { name: "About", href: "#" },
-    { name: "Contacts", href: "#" },
-    { name: "Mission", href: "#" },
+    { name: "About", href: "/about" },
+    { name: "Contacts", href: "/contact" },
+    { name: "Mission", href: "/mission" },
     { name: "Careers", href: "#" },
-    { name: "Blog", href: "#" },
+    { name: "Blog", href: "/blog" },
   ];
 
   const socialLinks = [
@@ -149,18 +149,17 @@ const Footer = () => {
             {/* Left Side - Logo and Copyright */}
             <div className="flex flex-col lg:flex-row items-start lg:items-center space-y-3 lg:space-y-0 lg:space-x-6">
               {/* Logo */}
-              <div className="flex items-center space-x-3">
-                <div className={`w-8 h-8 rounded flex items-center justify-center ${isTwThemeEnabled ? 'bg-twBlue-500' : 'bg-blue-500'}`}>
-                  <Icon icon="heroicons:map" className="w-5 h-5 text-white" />
-                </div>
-                <span className={`text-xl font-bold ${isTwThemeEnabled ? 'font-lexend text-white' : 'text-white'}`}>
-                  Navixy
-                </span>
+              <div className="flex items-center">
+                <img 
+                  src="/assets/new-images/LOGO.png" 
+                  alt="Company Logo" 
+                  className="h-12 w-auto object-contain"
+                />
               </div>
               
               {/* Copyright */}
               <p className={`text-[11px] ${isTwThemeEnabled ? 'font-proximaNova text-twBlue-300' : 'text-gray-400'} max-w-md`}>
-                © 2005-2025 Navixy. GPS tracking and telematics platform. All rights reserved.
+                © 2005-2025 GeoTrack. GPS tracking and telematics platform. All rights reserved.
               </p>
             </div>
 

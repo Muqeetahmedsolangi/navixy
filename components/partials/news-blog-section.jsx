@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Icon } from "@iconify/react";
 import Button from "@/components/ui/Button";
 import useTwTheme from "@/hooks/useTwTheme";
@@ -12,28 +13,31 @@ const NewsBlogSection = () => {
   const blogPosts = [
     {
       id: "user-applications",
-      title: "Make Navixy work for you: Introducing User Applications",
+      slug: "introducing-user-applications",
+      title: "Make GeoTrack work for you: Introducing User Applications",
       shortTitle: "INTRODUCING USER APPLICATIONS",
-      subtitle: "Make Navixy work for you",
-      description: "Navixy's new User Applications feature allows you to embed custom web apps directly within the platform. Whether it's fleet analytics, compliance tools, or industry-specific modules, this functionality empowers integrators to create tailored telematics solutions for their clients...",
+      subtitle: "Make GeoTrack work for you",
+      description: "GeoTrack's new User Applications feature allows you to embed custom web apps directly within the platform. Whether it's fleet analytics, compliance tools, or industry-specific modules, this functionality empowers integrators to create tailored telematics solutions for their clients...",
       icon: "heroicons:map",
       gradient: isTwThemeEnabled ? 'from-twBlue-400 to-twNavy-600' : 'from-blue-400 to-blue-600'
     },
     {
       id: "ngp-protocol",
+      slug: "ngp-protocol-telematics-standard",
       title: "Introducing NGP: A new standard for telematics data exchange",
       shortTitle: "INTRODUCING NGP",
       subtitle: "A new standard for telematics data exchange",
-      description: "We're introducing the Navixy Generic Protocol (NGP) — our answer to the fragmentation challenge in the telematics industry. We'll explore how the Navixy Generic Protocol transforms telematics, how it works, and the ways it can benefit your operations...",
+      description: "We're introducing the GeoTrack Generic Protocol (NGP) — our answer to the fragmentation challenge in the telematics industry. We'll explore how the GeoTrack Generic Protocol transforms telematics, how it works, and the ways it can benefit your operations...",
       icon: "heroicons:signal",
       gradient: isTwThemeEnabled ? 'from-twBlue-500 to-twBlue-600' : 'from-blue-500 to-blue-600'
     },
     {
       id: "passenger-counter",
+      slug: "automatic-passenger-counting-solution",
       title: "Enhancing public transportation with automatic passenger counting",
       shortTitle: "AUTOMATIC PASSENGER COUNTER SOLUTION",
       subtitle: "",
-      description: "Navixy's automatic passenger counter solutions, powered by advanced sensors like the ASPC102, enable transit operators to optimize routes, improve vehicle occupancy rates, and reduce operational costs. Learn how real-time passenger data can enhance efficiency and customer satisfaction...",
+      description: "GeoTrack's automatic passenger counter solutions, powered by advanced sensors like the ASPC102, enable transit operators to optimize routes, improve vehicle occupancy rates, and reduce operational costs. Learn how real-time passenger data can enhance efficiency and customer satisfaction...",
       icon: "heroicons:users",
       gradient: isTwThemeEnabled ? 'from-twBlue-400 to-twNavy-500' : 'from-blue-400 to-indigo-600'
     }
@@ -48,28 +52,31 @@ const NewsBlogSection = () => {
             Stay ahead with the latest news and trends
           </h2>
           <p className={`text-base max-w-2xl mx-auto leading-relaxed mb-6 ${isTwThemeEnabled ? (isDark ? 'text-twBlue-200' : 'text-twNavy-600') : 'text-slate-600 dark:text-slate-300'} ${isTwThemeEnabled ? 'font-proximaNova' : ''}`}>
-            Keep up with the latest Navixy updates and telematics news. Gain insights into emerging technologies, industry innovations, and best practices.
+            Keep up with the latest GeoTrack updates and telematics news. Gain insights into emerging technologies, industry innovations, and best practices.
           </p>
-          <Button
-            text="Explore blog"
-            className={`px-6 py-3 text-sm font-semibold rounded-lg ${isTwThemeEnabled ? 'bg-twBlue-500 hover:bg-twBlue-600 text-white font-proximaNova' : 'bg-blue-500 hover:bg-blue-600 text-white'} shadow-lg hover:shadow-xl transition-all duration-300`}
-          />
+          <Link href="/blog">
+            <Button
+              text="Explore blog"
+              className={`px-6 py-3 text-sm font-semibold rounded-lg ${isTwThemeEnabled ? 'bg-twBlue-500 hover:bg-twBlue-600 text-white font-proximaNova' : 'bg-blue-500 hover:bg-blue-600 text-white'} shadow-lg hover:shadow-xl transition-all duration-300`}
+            />
+          </Link>
         </div>
 
         {/* Blog Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {blogPosts.map((post, index) => (
-            <div key={post.id} className={`rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ${isTwThemeEnabled ? (isDark ? 'bg-twNavy-800 border border-twBlue-500/20' : 'bg-white border border-twNavy-100') : 'bg-white dark:bg-slate-700 border border-gray-200 dark:border-slate-600'}`}>
+             <Link key={post.id} href={`/blog/${post.slug}`} className="group">
+              <div className={`rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-[1.02] ${isTwThemeEnabled ? (isDark ? 'bg-twNavy-800 border border-twBlue-500/20' : 'bg-white border border-twNavy-100') : 'bg-white dark:bg-slate-700 border border-gray-200 dark:border-slate-600'}`}>
               
               {/* Card Header with Gradient */}
               <div className={`h-40 relative bg-gradient-to-br ${post.gradient}`}>
-                {/* Navixy Logo */}
+                {/* GeoTrack Logo */}
                 <div className="absolute top-3 left-3">
                   <div className="flex items-center space-x-2">
                     <div className="w-5 h-5 bg-white rounded flex items-center justify-center">
                       <Icon icon={post.icon} className="w-3 h-3 text-blue-600" />
                     </div>
-                    <span className="text-white font-semibold text-xs">Navixy</span>
+                    <span className="text-white font-semibold text-xs">GeoTrack</span>
                   </div>
                 </div>
 
@@ -133,11 +140,12 @@ const NewsBlogSection = () => {
                 <p className={`text-xs leading-relaxed mb-4 ${isTwThemeEnabled ? (isDark ? 'text-twBlue-100' : 'text-twNavy-600') : 'text-slate-600 dark:text-slate-300'} ${isTwThemeEnabled ? 'font-proximaNova' : ''}`}>
                   {post.description}
                 </p>
-                <button className={`text-xs font-semibold hover:underline transition-colors duration-300 ${isTwThemeEnabled ? (isDark ? 'text-twBlue-400 hover:text-twBlue-300' : 'text-twBlue-600 hover:text-twBlue-700') : 'text-blue-600 hover:text-blue-700'} ${isTwThemeEnabled ? 'font-proximaNova' : ''}`}>
+                <span className={`text-xs font-semibold hover:underline transition-colors duration-300 ${isTwThemeEnabled ? (isDark ? 'text-twBlue-400 group-hover:text-twBlue-300' : 'text-twBlue-600 group-hover:text-twBlue-700') : 'text-blue-600 group-hover:text-blue-700'} ${isTwThemeEnabled ? 'font-proximaNova' : ''}`}>
                   Learn more
-                </button>
+                </span>
               </div>
-            </div>
+              </div>
+            </Link>
           ))}
         </div>
       </div>

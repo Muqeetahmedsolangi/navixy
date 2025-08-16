@@ -18,26 +18,26 @@ const GetStartedPage = () => {
     <div>
       {/* Hero Section */}
       <HeroSection />
-      
+
       {/* Asset Monitoring Slider */}
       <AssetMonitoringSlider />
-      
+
       {/* double slider */}
       <DualMarquee />
-      
+
       {/* Partner Testimonials Slider */}
       <PartnerTestimonialsSlider />
-      
+
       {/* Industry Solutions Section */}
       <IndustrySolutionsSection />
-            {/* GPS Tracking CTA Section */}
-            <GPSTrackingCTASection />
-      
+      {/* GPS Tracking CTA Section */}
+      <GPSTrackingCTASection />
+
       {/* News & Blog Section */}
       <NewsBlogSection />
-      
 
-      
+
+
       {/* Additional Content */}
       <div className={`min-h-screen flex items-center justify-center ${isTwThemeEnabled ? (isDark ? 'tw-bg' : 'tw-bg') : 'bg-white dark:bg-slate-900'}`}>
         <div className="text-center">

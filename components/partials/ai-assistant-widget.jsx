@@ -13,12 +13,12 @@ const AIAssistantWidget = () => {
   const [messages, setMessages] = useState([
     {
       type: "system",
-      content: "Get answers to your Navixy questions with Navixy AI Assistant — your always-on Q&A tool providing instant guidance, feature explanations, and helpful recommendations about our platform.",
+      content: "Get answers to your GeoTrack questions with GeoTrack AI Assistant — your always-on Q&A tool providing instant guidance, feature explanations, and helpful recommendations about our platform.",
       timestamp: "12:54 PM"
     },
     {
       type: "system", 
-      content: "Start typing to get answers about Navixy",
+      content: "Start typing to get answers about GeoTrack",
       timestamp: "12:54 PM"
     }
   ]);
@@ -45,7 +45,7 @@ const AIAssistantWidget = () => {
       setTimeout(() => {
         setMessages(prev => [...prev, {
           type: "ai",
-          content: "Thank you for your question! I'm here to help you with Navixy platform information. How can I assist you today?",
+          content: "Thank you for your question! I'm here to help you with GeoTrack platform information. How can I assist you today?",
           timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
         }]);
       }, 1000);
@@ -71,7 +71,7 @@ const AIAssistantWidget = () => {
                 <Icon icon="heroicons:sparkles" className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h3 className={`font-semibold text-sm ${isTwThemeEnabled ? 'font-lexend' : ''}`}>Navixy AI assistant</h3>
+                <h3 className={`font-semibold text-sm ${isTwThemeEnabled ? 'font-lexend' : ''}`}>GeoTrack AI assistant</h3>
               </div>
             </div>
             <div className="flex items-center space-x-2">
